@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Issue Tracker App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    .priority-label {
+      display: inline-block;
+      padding: 2px 6px;
+      border-radius: 5px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      margin-left: 8px;
+    }
+    .priority-low {
+      background-color: #d4edda;
+      color: #155724;
+    }
+    .priority-medium {
+      background-color: #fff3cd;
+      color: #856404;
+    }
+    .priority-high {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+    .issue-card {
+      background: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+    .issue-actions button {
+      margin-top: 0.5rem;
+      margin-right: 0.5rem;
+      padding: 0.3rem 0.6rem;
+      font-size: 0.8rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .delete-btn {
+      background-color: #dc3545;
+      color: white;
+    }
+    .edit-btn {
+      background-color: #007bff;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to My Flask App</h1>
+    <p>This is a simple Flask + SQL + JS issue tracker.</p>
+
+    <div class="wrapper">
+      <!-- Form for submitting new issues -->
+      <form id="issue-form">
+        <input type="text" id="title" placeholder="Title" required>
+        <textarea id="description" placeholder="Description" required></textarea>
+        <select id="priority">
+          <option disabled selected>Select Priority</option>
+          <option>Low</option>
+          <option>Medium</option>
+          <option>High</option>
+        </select>
+        <button type="submit">Submit</button>
+      </form>
+
+      <!-- List of issues displayed here -->
+      <div id="issue-list"></div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>

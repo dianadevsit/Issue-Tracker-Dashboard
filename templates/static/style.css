@@ -1,0 +1,101 @@
+/* ========== BASE ========== */
+body {
+    background: #f4f6f9;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  h1, h2, h3 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+  }
+  
+  /* ========== LAYOUT ========== */
+  .wrapper {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  /* ========== FORM ========== */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  input, textarea, select, button {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* ========== ISSUE DISPLAY ========== */
+  #issue-list {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .issue {
+    background: white;
+    border-left: 4px solid #007bff;
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  
+  .issue h3 {
+    margin: 0 0 0.5rem;
+    color: #007bff;
+  }
+  
+  .issue p {
+    margin: 0.2rem 0;
+  }
+  
+  .issue small {
+    display: block;
+    margin-top: 0.5rem;
+    color: #888;
+    font-size: 0.85rem;
+  }
+  
+  /* ========== RESPONSIVE ========== */
+  @media screen and (max-width: 768px) {
+    .wrapper {
+      flex-direction: column;
+    }
+  }
+  
